@@ -157,7 +157,7 @@ export default class Video extends Component {
 
   render() {
     const resizeMode = this.props.resizeMode;
-    const source = resolveAssetSource(this.props.source) || {};
+    const source = this.props.source || {};
 
     let uri = source.uri || '';
     if (uri && uri.match(/^\//)) {
